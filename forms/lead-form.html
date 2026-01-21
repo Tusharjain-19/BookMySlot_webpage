@@ -1,234 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2563eb;
-            --text: #1f2937;
-            --border: #e5e7eb;
-            --radius: 8px;
+            --primary: #1e3a8a; /* Deep Blue */
+            --primary-light: #2563eb;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --bg-input: #f8fafc;
         }
 
         body {
             font-family: 'Inter', system-ui, sans-serif;
             color: var(--text);
             margin: 0;
-            padding: 0;
-            background: #f9fafb;
+            padding: 0.5rem;
+            background: transparent;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-        }
-
-        .form-container {
-            width: 100%;
-            padding: 1rem;
             box-sizing: border-box;
+            /* overflow: hidden; Removed to allow scrolling if needed */
         }
 
         form {
             background: white;
-            padding: 1.5rem;
+            padding: 1.25rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 500px;
+            max-width: 650px;
             margin: 0 auto;
+            border: 1px solid var(--border);
             box-sizing: border-box;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 0.75rem;
         }
 
         .form-title {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
             color: var(--primary);
-            text-align: center;
+            margin-bottom: 0.2rem;
+        }
+
+        .form-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* 2 Column Grid for Fields */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-bottom: 1rem;
         }
 
         .form-group {
-            margin-bottom: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .full-width {
+            grid-column: span 2;
         }
 
         label {
-            display: block;
-            margin-bottom: 0.5rem;
             font-weight: 600;
-            font-size: 0.875rem;
+            font-size: 0.8rem;
+            color: var(--text);
         }
 
-        input,
-        select,
-        textarea {
+        input, select, textarea {
             width: 100%;
-            padding: 0.75rem;
+            padding: 0.5rem 0.75rem;
             border: 1px solid var(--border);
-            border-radius: var(--radius);
+            border-radius: 6px;
+            background: var(--bg-input);
+            font-family: inherit;
+            font-size: 0.85rem;
+            transition: all 0.2s;
             box-sizing: border-box;
-            font-size: 0.95rem;
-            transition: border-color 0.2s;
         }
 
-        input:focus {
+        input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: var(--primary);
+            border-color: var(--primary-light);
+            background: white;
             box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
 
-        .radio-grid {
+        /* Radio Buttons Cards */
+        .radio-group {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-top: 0.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
         }
 
-        .radio-item {
+        .radio-label {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            background: #f8fafc;
-            padding: 0.75rem;
-            border-radius: 8px;
+            justify-content: center;
+            gap: 0.25rem;
+            padding: 0.4rem;
+            background: white;
             border: 1px solid var(--border);
+            border-radius: 6px;
             cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            text-align: center;
         }
 
-        .radio-item input {
-            width: auto;
+        .radio-label:hover {
+            border-color: var(--primary-light);
+            background: #eff6ff;
+        }
+
+        .radio-label input {
+            display: none; /* Hide default radio */
+        }
+
+        .radio-label:has(input:checked) {
+            background: #eff6ff;
+            border-color: var(--primary-light);
+            color: var(--primary);
+            font-weight: 600;
+            box-shadow: 0 1px 2px rgba(37, 99, 235, 0.1);
         }
 
         .btn-submit {
             width: 100%;
-            padding: 1rem;
-            background: var(--primary);
+            padding: 0.75rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
             border: none;
-            border-radius: var(--radius);
-            font-weight: 700;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
             cursor: pointer;
-            font-size: 1rem;
-            margin-top: 1rem;
-            transition: transform 0.2s, background 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
+            letter-spacing: 0.02em;
         }
 
         .btn-submit:hover {
-            background: #1d4ed8;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px -3px rgba(37, 99, 235, 0.3);
         }
 
         .success-msg {
             display: none;
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 3rem 2rem;
             background: white;
-            border-radius: 12px;
-            max-width: 600px;
+            border-radius: 16px;
+            max-width: 500px;
             margin: 2rem auto;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
-        .success-msg h3 {
+        .success-icon {
+            width: 64px;
+            height: 64px;
+            background: #dcfce7;
             color: #166534;
-            font-size: 1.5rem;
-            margin-top: 0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
         }
 
-        @media (max-width: 480px) {
-            .radio-grid {
+        @media (max-width: 600px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .full-width {
+                grid-column: span 1;
+            }
+            .radio-group {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
-
 <body>
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-        onload="if(submitted) {showSuccess();}"></iframe>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {showSuccess();}"></iframe>
 
-    <div class="form-container">
-        <form id="leadForm"
-            action="https://docs.google.com/forms/u/0/d/1wOtwlzSGjH_lvjo_mZte9OW-xDKN5r57JZxWG8IcLXU/formResponse"
-            method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+    <form id="leadForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdwpeLYwKm6vE4OhT7nAjIFv7NBn-DmN9M4J8vfCmvwWzEHvw/formResponse" method="POST" target="hidden_iframe" onsubmit="handleSubmit(event);">
+        
+        <div class="form-header">
+            <div class="form-title">Get Started Today</div>
+            <div class="form-subtitle">Complete your profile to schedule a personalized demo.</div>
+        </div>
 
-            <div class="form-title">Onboarding Form</div>
-
+        <div class="form-grid">
+            <!-- Contact Info -->
             <div class="form-group">
-                <label for="name">Contact Person Name *</label>
-                <input type="text" id="name" name="entry.2092238618" required placeholder="John Doe">
+                <label>Full Name *</label>
+                <input type="text" name="entry.2092238618" required placeholder="John Doe">
             </div>
 
             <div class="form-group">
-                <label for="mobile">Mobile Number *</label>
-                <input type="tel" id="mobile" name="entry.1428564814" required placeholder="9876543210"
-                    pattern="[0-9]{10}">
+                <label>Mobile Number *</label>
+                <input type="tel" name="entry.1428564814" required placeholder="98765 43210" pattern="[0-9]{10}">
+            </div>
+
+            <div class="form-group full-width">
+                <label>Email Address *</label>
+                <input type="email" name="entry.1556369182" required placeholder="john@company.com">
+            </div>
+
+            <!-- Business Info -->
+            <div class="form-group">
+                <label>Business Name *</label>
+                <input type="text" name="entry.479301265" required placeholder="Restaurant / Clinic Name">
             </div>
 
             <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="entry.1556369182" required placeholder="john@example.com">
+                <label>City *</label>
+                <input type="text" name="entry.707179769" required placeholder="e.g. Bangalore">
             </div>
 
-            <div class="form-group">
-                <label for="business">Business Name *</label>
-                <input type="text" id="business" name="entry.479301265" required placeholder="Restaurant / Clinic Name">
-            </div>
-
-            <div class="form-group">
-                <label>Business Type *</label>
-                <div class="radio-grid">
-                    <label class="radio-item"><input type="radio" name="entry.626675342" value="cafe or restaurant"
-                            required> Restaurant / Cafe</label>
-                    <label class="radio-item"><input type="radio" name="entry.626675342" value="clinic"> Clinic /
-                        Healthcare</label>
-                    <label class="radio-item"><input type="radio" name="entry.626675342" value="salon"> Salon /
-                        Spa</label>
-                    <label class="radio-item"><input type="radio" name="entry.626675342" value="__other_option__">
-                        Other</label>
+            <div class="form-group full-width">
+                <label>Business Type</label>
+                <div class="radio-group" style="grid-template-columns: repeat(4, 1fr);">
+                    <label class="radio-label">
+                        <input type="radio" name="entry.626675342" value="cafe or restaurant" required>
+                        Dining
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="entry.626675342" value="clinic">
+                        Clinic
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="entry.626675342" value="salon">
+                        Salon
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="entry.626675342" value="__other_option__">
+                        Other
+                    </label>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="address">Business Location / Address *</label>
-                <textarea id="address" name="entry.906942623" rows="3" required
-                    placeholder="Full street address"></textarea>
+            <div class="form-group full-width">
+                <label>Address / Location *</label>
+                <textarea name="entry.906942623" rows="2" required placeholder="Start typing your address..."></textarea>
             </div>
 
-            <div class="form-group">
-                <label for="city">City *</label>
-                <input type="text" id="city" name="entry.707179769" required placeholder="e.g. Bangalore">
-            </div>
-
-            <div class="form-group">
-                <label>Do you take reservations currently? *</label>
-                <div class="radio-grid" style="grid-template-columns: repeat(2, 1fr);">
-                    <label class="radio-item"><input type="radio" name="entry.1200467915" value="yes" required>
-                        Yes</label>
-                    <label class="radio-item"><input type="radio" name="entry.1200467915" value="no"> No</label>
+            <div class="form-group full-width">
+                <label>Taking Reservations?</label>
+                <div class="radio-group" style="grid-template-columns: 1fr 1fr;">
+                    <label class="radio-label">
+                        <input type="radio" name="entry.1200467915" value="yes" required>
+                        Yes, Currently
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="entry.1200467915" value="no">
+                        Not Yet
+                    </label>
                 </div>
             </div>
+        </div>
 
-            <button type="submit" class="btn-submit">Submit Registration</button>
-        </form>
-    </div>
+        <button type="submit" class="btn-submit">Book My Demo</button>
+    </form>
 
     <div id="successMessage" class="success-msg">
-        <h3>Registration Received!</h3>
-        <p>Your details have been submitted successfully. Our team will reach out to you within 24 hours.</p>
-        <button onclick="location.reload()" class="btn-submit" style="width: auto; padding: 0.75rem 2rem;">Back to
-            Form</button>
+        <div class="success-icon">✓</div>
+        <div class="form-title" style="color: #166534;">You're All Set!</div>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">We've received your request. Our team will verify your details and contact you shortly.</p>
+        <button onclick="location.reload()" class="btn-submit" style="background: #f1f5f9; color: var(--text); padding: 0.75rem;">Submit Another</button>
     </div>
 
     <script>
         var submitted = false;
+
+        function handleSubmit(event) {
+            // Don't prevent default, we want the form to submit to the iframe
+            // But we do want to disable the button immediately
+            var btn = document.querySelector('.btn-submit');
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = 'Booking...';
+                btn.style.opacity = '0.7';
+                btn.style.cursor = 'not-allowed';
+            }
+            submitted = true;
+        }
+
         function showSuccess() {
-            document.getElementById('leadForm').style.display = 'none';
-            document.getElementById('successMessage').style.display = 'block';
-            window.parent.postMessage('formSubmitted', '*');
+            // Only show success if we actually submitted
+            if (submitted) {
+                document.getElementById('leadForm').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+                try {
+                    window.parent.postMessage('formSubmitted', '*');
+                } catch(e) {}
+            }
         }
     </script>
 </body>
-
 </html>
