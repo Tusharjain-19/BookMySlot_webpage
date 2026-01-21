@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyDine - Reservation & operations system for restaurants</title>
+        <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="apple-touch-icon" href="assets/images/logo_website.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo_website.png" alt="BookMySlot Logo">
+            </a>
+
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="index.html#products">Products <span class="chevron"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="bookmydine.html">
+                                    <strong>BookMyDine</strong>
+                                    <span>Restaurants & Cafes</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="bookmyclinic.html">
+                                    <strong>BookMyClinic</strong>
+                                    <span>Clinics & Doctors</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="bookmysalon.html">
+                                    <strong>BookMySalon</strong>
+                                    <span>Salons & Spas</span>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="coming-soon">
+                                <strong>BookMyOffice</strong>
+                                <span>COMING SOON</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#waiter-app">Waiter App</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="#contact" class="btn btn-primary">Request Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <span class="card-badge live" style="display:inline-block; margin-bottom: 1.5rem;">LIVE PRODUCT</span>
+            <h1>BookMyDine - Reservation & operations system for restaurants</h1>
+            <p class="subtext">The complete toolkit to manage your cafe, restaurant, or cloud kitchen without technical
+                hassle.</p>
+            <div class="cta-group">
+                <a href="#contact" class="btn btn-primary">Request Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- What We Offer -->
+    <section id="features" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>What We Offer</h2>
+                <p>Tools to manage reservations, staff, and daily operations efficiently.</p>
+            </div>
+            <div class="features-grid">
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/website.png" alt="Website"></div>
+                    <h3>Restaurant website with booking</h3>
+                    <p>A clean, professional website where guests can view details and book tables online.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/booking.png" alt="Table Reservations"></div>
+                    <h3>Online table reservations</h3>
+                    <p>Reduce phone calls and manage guest flow with controlled table bookings.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/friendly.png" alt="Booking Page"></div>
+                    <h3>Customer booking page</h3>
+                    <p>A dedicated booking link that works smoothly on mobile and desktop.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/mobile-app.png" alt="Waiter App"></div>
+                    <h3>Waiter app</h3>
+                    <p>Mobile-friendly interface for waiters to manage tables and track orders easily.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/admin-panel.png" alt="Admin Dashboard"></div>
+                    <h3>Admin dashboard</h3>
+                    <p>Manage bookings, tables, staff activity, and daily operations from one place.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/confirmation.png" alt="Email Notifications"></div>
+                    <h3>Email notifications (Limited*)</h3>
+                    <p>Automatic booking confirmations for guests and alerts for admins.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/bell.png" alt="Admin Notifications"></div>
+                    <h3>Admin panel notifications</h3>
+                    <p>Instant in-dashboard alerts for new bookings, appointments, or orders.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/analysis.png" alt="Reports"></div>
+                    <h3>Reports & insights</h3>
+                    <p>View daily booking data, order summaries, and performance trends.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/cloud-computing.png" alt="Storage"></div>
+                    <h3>Flexible data storage</h3>
+                    <p>Choose between Google Sheets or a real-time database based on your business size.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/hosting.png" alt="Hosting"></div>
+                    <h3>Free Netlify Hosting</h3>
+                    <p>Fast and secure hosting included for your appointment booking website.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waiter App -->
+    <section id="waiter-app">
+        <div class="container">
+            <div class="section-header">
+                <h2>Waiter App</h2>
+                <p>Faster service. Fewer mistakes. Better table control.</p>
+            </div>
+            <div class="features-grid">
+                <div class="card">
+                    <h3>Mobile-first design</h3>
+                    <p>Works on any smartphone without special devices.</p>
+                </div>
+                <div class="card">
+                    <h3>Quick order entry</h3>
+                    <p>Add or update table orders in seconds.</p>
+                </div>
+                <div class="card">
+                    <h3>Live table </h3>
+                    <p>View active tables, and pending items in real time.</p>
+                </div>
+                <div class="card">
+                    <h3>Admin panel sync</h3>
+                    <p>Orders instantly reflect in the admin dashboard for monitoring.</p>
+                </div>
+                <div class="card">
+                    <h3>Bluetooth printing support</h3>
+                    <p>Print order slips directly using portable Bluetooth printers.</p>
+                </div>
+                <div class="card">
+                    <h3>Reduced errors</h3>
+                    <p>Minimizes manual mistakes and speeds up service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel -->
+    <section id="admin" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Admin Panel Options</h2>
+                <p>Choose the system that fits your operational style.</p>
+            </div>
+            <div class="system-options">
+                <div class="system-card" style="background:white;">
+                    <h3>Sheet Based Admin</h3>
+                    <ul style="list-style:none; padding:1rem 0; color:var(--text-muted); line-height:2;">
+                        <li>✓ Google Sheet database</li>
+                        <li>✓ Automatic booking records</li>
+                        <li>✓ Clean customer list</li>
+                        <li>✓ Daily sales tracking</li>
+                        <li>✓ <strong>Simple & Low-cost</strong></li>
+                    </ul>
+                </div>
+                <div class="system-card" style="background:white;">
+                    <h3>Real-Time Admin</h3>
+                    <ul style="list-style:none; padding:1rem 0; color:var(--text-muted); line-height:2;">
+                        <li>✓ Live interactive dashboard</li>
+                        <li>✓ Table occupancy view</li>
+                        <li>✓ Real-time order status</li>
+                        <li>✓ Advanced sales analytics</li>
+                        <li>✓ <strong>Multi-user live sync</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>BookMyDine Pricing - All-in-One Restaurant System</h2>
+                <p>Complete transparency. One-time setup charges, no monthly fees.</p>
+            </div>
+            <div class="pricing-grid" style="max-width: 1200px;">
+                <!-- Option 1 -->
+                <div class="pricing-card">
+                    <div>
+                        <h3>Booking Website</h3>
+                        <p>Best for small restaurants & cafes</p>
+                        <div class="price-final">₹15,000</div>
+                        <ul class="features-list">
+                            <li>Restaurant website (single-page)</li>
+                            <li>Online table reservation system</li>
+                            <li>Customer booking page</li>
+                            <li>Google Form + Google Sheet backend</li>
+                            <li>Email notifications (Limited*)</li>
+                            <li>Free hosting on Netlify</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-outline">Request Demo</a>
+                </div>
+
+                <!-- Option 2: New Card -->
+                <div class="pricing-card">
+                    <div>
+                        <h3>Waiter App + Admin Panel</h3>
+                        <p>Best for walk-in restaurants</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.5rem 0; line-height: 1.4;">
+                            For restaurants that don’t need a website but want faster service and better control over
+                            tables and orders.
+                        </p>
+                        <div class="price-final">₹7,000</div>
+                        <ul class="features-list">
+                            <li>Mobile-friendly waiter app</li>
+                            <li>Table-wise order entry</li>
+                            <li>Live table status tracking</li>
+                            <li>Admin dashboard for owner</li>
+                            <li>Daily sales & order reports</li>
+                            <li>Google Sheets as database</li>
+                            <li>Lifetime access (one-time setup)</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-outline">Request Demo</a>
+                </div>
+
+                <!-- Option 3 -->
+                <div class="pricing-card featured">
+                    <div>
+                        <h3>All-in-One System (Recommended)</h3>
+                        <p>Reservation + Waiter App </p>
+                        <div style="margin: 1rem 0;">
+                            <span style="font-size: 0.9rem; color: var(--text-muted);">Total Value: <span
+                                    class="bundle-price" style="text-decoration:none;">₹22,000</span></span>
+                            <div class="price-final">₹20,000</div>
+                        </div>
+                        <div class="discount-badge">Save ₹2,000 with all-in-one bundle</div>
+                        <ul class="features-list">
+                            <li>Includes Restaurant Website</li>
+                            <li>Table reservations (Real-time)</li>
+                            <li>Waiter mobile app</li>
+                            <li>Booking limits & Holiday mode</li>
+                            <li>Table Status tracking</li>
+                            <li>Admin dashboard & Sales reports</li>
+                            <li>Lifetime access</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Request Demo</a>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p style="font-size: 0.95rem; color: var(--text-muted);">
+                    All prices are one-time setup charges. No monthly fees.
+                </p>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">
+                    *Prices may vary based on additional features, cloud database requirements, or custom domain
+                    selection.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Started with BookMyDine</h2>
+                <p>Fill out the form below and we'll reach out to set up your system.</p>
+            </div>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <iframe src="forms/lead-form.html" width="100%" height="900px" frameborder="0"
+                    style="border: none;"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2025 BookMySlot - Built in India for small businesses.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMySlot - Online Booking Software</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="apple-touch-icon" href="assets/images/logo_website.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo_website.png" alt="BookMySlot Logo">
+            </a>
+
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="#products">Products <span class="chevron"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="bookmydine.html">
+                                    <strong>BookMyDine</strong>
+                                    <span>Restaurants & Cafes</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="bookmyclinic.html">
+                                    <strong>BookMyClinic</strong>
+                                    <span>Clinics & Doctors</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="bookmysalon.html">
+                                    <strong>BookMySalon</strong>
+                                    <span>Salons & Spas</span>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="coming-soon">
+                                <strong>BookMyOffice</strong>
+                                <span>COMING SOON</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="#contact" class="btn btn-primary">Request Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>One booking & operations platform for service businesses</h1>
+            <p class="subtext">Accept reservations, manage customers, and run daily operations for restaurants, clinics,
+                salons, and professionals without complex software.</p>
+            <div class="cta-group">
+                <a href="#contact" class="btn btn-primary">Request Demo</a>
+                <a href="#products" class="btn btn-outline">View Products</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="products" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Specialized Solutions</h2>
+                <p>Simple, reliable systems built for Indian SMBs.</p>
+            </div>
+
+            <div class="product-grid">
+                <a href="bookmydine.html" class="product-card">
+                    <span class="card-badge live">LIVE</span>
+                    <div class="product-icon"><img src="assets/images/website.png" alt="Dine"></div>
+                    <h3>BookMyDine</h3>
+                    <p>Restaurants & Cafes</p>
+                    <span class="btn-text">Learn More →</span>
+                </a>
+                <a href="bookmyclinic.html" class="product-card">
+                    <span class="card-badge live">LIVE</span>
+                    <div class="product-icon"><img src="assets/images/clinic.png" alt="Clinic"></div>
+                    <h3>BookMyClinic</h3>
+                    <p>Clinics & Doctors</p>
+                    <span class="btn-text">Learn More →</span>
+                </a>
+                <a href="bookmysalon.html" class="product-card">
+                    <span class="card-badge live">LIVE</span>
+                    <div class="product-icon"><img src="assets/images/salon.svg" alt="Salon"></div>
+                    <h3>BookMySalon</h3>
+                    <p>Salons & Spas</p>
+                    <span class="btn-text">Learn More →</span>
+                </a>
+                <a href="bookmyoffice.html" class="product-card">
+                    <span class="card-badge">Coming Soon</span>
+                    <div class="product-icon"><img src="assets/images/office.png" alt="Office"></div>
+                    <h3>BookMyOffice</h3>
+                    <p>Offices & Corporate</p>
+                    <span class="btn-text">Join Waitlist →</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Go digital in four simple steps.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Choose Business</h3>
+                    <p>Select your business type.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Get Your Page</h3>
+                    <p>We set up your booking page.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Customers Book</h3>
+                    <p>Accept slots online 24/7.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>Manage Admin</h3>
+                    <p>Control everything easily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Features -->
+    <section id="features" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Platform Features</h2>
+                <p>Powerful tools to simplify your daily operations.</p>
+            </div>
+            <div class="features-grid">
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/booking.png" alt="Online Booking"></div>
+                    <h3>Online booking</h3>
+                    <p>Accept appointments and reservations 24&times;7 without phone calls.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/admin-panel.png" alt="Admin Dashboard"></div>
+                    <h3>Admin dashboard</h3>
+                    <p>Manage bookings, customers, and schedules from any device.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/confirmation.png" alt="Email Notifications"></div>
+                    <h3>Email notifications (Limited*)</h3>
+                    <p>Get instant email alerts for every new booking or update.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/cloud-computing.png" alt="Storage Options"></div>
+                    <h3>Flexible storage options</h3>
+                    <p>Choose between Google Sheets or a real-time database based on your needs.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/limited.png" alt="Booking Limits"></div>
+                    <h3>Booking limits</h3>
+                    <p>Control the number of bookings per slot to avoid overbooking.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/switch-off.png" alt="Holiday Mode"></div>
+                    <h3>Holiday mode</h3>
+                    <p>Pause bookings anytime with a single click.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/analysis.png" alt="Reports"></div>
+                    <h3>Reports & insights</h3>
+                    <p>View daily and monthly reports to track business performance.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/friendly.png" alt="Mobile Friendly"></div>
+                    <h3>Mobile-friendly</h3>
+                    <p>Works smoothly on mobile, tablet, and desktop.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/bell.png" alt="Admin Notifications"></div>
+                    <h3>Admin panel notifications</h3>
+                    <p>Instant in-dashboard alerts for new bookings, appointments, or orders.</p>
+                </div>
+                <div class="card">
+                    <div class="feature-icon"><img src="assets/images/hosting.png" alt="Netlify Hosting"></div>
+                    <h3>Free Netlify Hosting</h3>
+                    <p>Fast and secure hosting included for your appointment booking website.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tell us about your business</h2>
+            </div>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <iframe src="forms/lead-form.html" width="100%" height="900px" frameborder="0"
+                    style="border: none; border-radius: 12px; box-shadow: var(--shadow);"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 BookMySlot - Built in India for small businesses.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
